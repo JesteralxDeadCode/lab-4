@@ -14,12 +14,12 @@ void zad1()
 }
 void zad2()
 {
-	int amebs = 1;
+	int amebs = 1, x = 1;
 	for (int i = 0; i < 24; i+=3)
 	{
 		amebs *= 2;
+		cout << "колво амеб в шаге #" << x++ << " равны :" << amebs<< "\n";
 	}
-	cout << "колво амеб:" << amebs;
 } 
 void zad3()
 {
@@ -34,8 +34,8 @@ void zad3()
 	{
 		do
 		{
-			result = k / (pow((k - y), 0.5));
-			cout << "альфа ровна:" << result << "\n";
+			result = asin((pow((k - y), 0.5)) / k) * 57.3;
+			cout << "угол для длины катета:"<< y<< " равен :" << result << " градусов и :"<< result/57.3<< " радиан\n";
 			y += h;
 
 		} while (y < 3);
